@@ -35,7 +35,7 @@
 
 			<div id="main" role="main" data-role='content'>
 				<img src="img/logo.png" width="90%" class="fill" style="position: fixed; top: 25%"/>
-				<div class="pt-menu">
+				<div class="pt-menu"  id="slide1" style="display: none">
 					<span data-theme="d" data-corners="false" data-role="button" style="background: #FF9900; opacity: 0.95;color: white">
 						 <div data-theme="d" data-corners="true" style="border: 1px solid white; padding: 10px; text-shadow: none; background: white; color: gray"> MEETING </div> 
 						 <div >
@@ -56,7 +56,7 @@
 						 </div>
 					</span>
 				</div>
-				<div class="pt-menu">
+				<div class="pt-menu" id="slide2" style="display: none">
 					<span data-theme="d" data-corners="true" data-role="button" style="background: #000033; opacity: 0.95;color: white">
 						 <div data-theme="d" data-corners="true" style="border: 1px solid white; padding:5px; text-shadow: none; background: white; color: gray"> ACTIVITY </div> 
 						 <div >
@@ -142,6 +142,10 @@
 		<script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
 		<script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
 		<![endif]-->
-
+<script>
+	$("#slide2").slideDown('slow',function(){
+		$("#slide1").slideDown('slow');
+	});
+</script>
 	</body>
 </html>
